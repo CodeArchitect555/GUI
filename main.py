@@ -4,7 +4,7 @@ root = Tk()
 root.title('todo list')
 root.geometry()
 
-class Elder:
+class Main:
     def __init__(self, master):
         myFrame = Frame(master)
         myFrame.grid()
@@ -22,6 +22,6 @@ class Elder:
         print("look at you your clicky")
 
 
-e = Elder(root)
+e = Main(root)
 
 root.mainloop()
