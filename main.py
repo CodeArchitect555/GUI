@@ -1,14 +1,8 @@
-from tkinter import *
+import tkinter as tk
+from tkinter import Label,Button,Entry 
 
-root = Tk()
-root.title('todo list')
-root.geometry()
-
-class Main:
+class Main(tk.Frame):
     def __init__(self, master):
-        myFrame = Frame(master)
-        myFrame.grid()
-
         self.myLabel = Label(master,text="todolist",width=10,height=5)
         self.myLabel.grid(row=0,column=0)
 
@@ -21,7 +15,14 @@ class Main:
     def clicker(self):
         print("look at you your clicky")
 
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
 
-e = Main(root)
+        self.title('Todo app')
+        self.geometry('485x150')
 
-root.mainloop()
+if __name__ == "__main__":
+    app = App()
+    Main(app)
+    app.mainloop()
